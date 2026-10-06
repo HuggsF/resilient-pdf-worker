@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./chaos",
+    "outDir": "./dist-chaos",
+    "declaration": false,
+    "paths": {}
+  },
+  "include": ["chaos/**/*"],
+  "exclude": ["node_modules", "dist", "dist-chaos", "tests"]
+}

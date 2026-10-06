@@ -1,0 +1,7 @@
+node_modules
+dist
+dist-chaos
+coverage
+.env
+*.log
+.git

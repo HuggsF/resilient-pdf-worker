@@ -1,0 +1,14 @@
+node_modules/
+dist/
+dist-chaos/
+coverage/
+.env
+.env.*.local
+*.log
+logs/
+tmp/
+*.tmp
+.DS_Store
+.idea/
+.vscode/
+*.tsbuildinfo
