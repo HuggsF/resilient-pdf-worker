@@ -1,0 +1,95 @@
+{
+  "measuredAt": "2026-10-06T16:55:05.981Z",
+  "options": {
+    "certificates": 300,
+    "degradedMs": 180000,
+    "outageCertificates": 100,
+    "outageMs": 45000,
+    "api": "http://localhost:3000",
+    "chaos": "http://localhost:4000",
+    "worker": "pdf_worker_consumer",
+    "timeoutMs": 900000
+  },
+  "results": [
+    {
+      "name": "Flaky API",
+      "failureRate": 0.3,
+      "incidentMs": null,
+      "certificates": 300,
+      "completed": 298,
+      "completedDuringIncident": null,
+      "deadLetter": 2,
+      "lost": 0,
+      "dlqDepth": 2,
+      "apiRequests": 423,
+      "apiFailures": 125,
+      "duplicatePdfs": 0,
+      "breaker": {
+        "opened": 0,
+        "halfOpen": 0,
+        "closed": 0
+      },
+      "durationMs": 24249
+    },
+    {
+      "name": "DLQ recovery",
+      "failureRate": 0,
+      "incidentMs": null,
+      "certificates": 2,
+      "completed": 2,
+      "completedDuringIncident": null,
+      "deadLetter": 0,
+      "lost": 0,
+      "dlqDepth": 0,
+      "apiRequests": 2,
+      "apiFailures": 0,
+      "duplicatePdfs": 0,
+      "breaker": {
+        "opened": 0,
+        "halfOpen": 0,
+        "closed": 0
+      },
+      "durationMs": 677
+    },
+    {
+      "name": "Degraded API",
+      "failureRate": 0.7,
+      "incidentMs": 180000,
+      "certificates": 300,
+      "completed": 300,
+      "completedDuringIncident": 78,
+      "deadLetter": 0,
+      "lost": 0,
+      "dlqDepth": 0,
+      "apiRequests": 487,
+      "apiFailures": 187,
+      "duplicatePdfs": 0,
+      "breaker": {
+        "opened": 6,
+        "halfOpen": 6,
+        "closed": 4
+      },
+      "durationMs": 213707
+    },
+    {
+      "name": "Outage",
+      "failureRate": 1,
+      "incidentMs": 45000,
+      "certificates": 100,
+      "completed": 100,
+      "completedDuringIncident": 0,
+      "deadLetter": 0,
+      "lost": 0,
+      "dlqDepth": 0,
+      "apiRequests": 146,
+      "apiFailures": 46,
+      "duplicatePdfs": 0,
+      "breaker": {
+        "opened": 2,
+        "halfOpen": 2,
+        "closed": 1
+      },
+      "durationMs": 91266
+    }
+  ]
+}

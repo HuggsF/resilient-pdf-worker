@@ -80,9 +80,9 @@ const main = async (): Promise<void> => {
       });
 
       if (res.ok) {
-        const data = (await res.json()) as { id: string };
-        enqueuedIds.push(data.id);
-        logger.info(`Enqueued certificate: [${data.id}] for ${student}`);
+        const data = (await res.json()) as { certificateId: string };
+        enqueuedIds.push(data.certificateId);
+        logger.info(`Enqueued certificate: [${data.certificateId}] for ${student}`);
       } else {
         logger.error(`Failed to enqueue for ${student}: HTTP ${res.status}`);
       }
