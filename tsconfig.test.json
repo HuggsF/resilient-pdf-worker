@@ -6,6 +6,6 @@
     "isolatedModules": true,
     "types": ["node", "jest"]
   },
-  "include": ["src/**/*", "tests/**/*", "scripts/**/*", "chaos/**/*", "jest.config.ts"],
+  "include": ["src/**/*", "tests/**/*", "scripts/**/*", "chaos/**/*", "benchmarks/**/*", "jest.config.ts"],
   "exclude": ["node_modules", "dist", "dist-chaos"]
 }
